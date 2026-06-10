@@ -276,8 +276,8 @@ stu = 50
 que = 30
 
 def getDataLoader(batch_size, num_of_questions, max_step, que, setid, stu):
-    handle = DataReader('C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_train_new_'+str(stu)+'_set'+str(setid)+'.txt',
-                        'C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_test_new_'+str(que)+'_set'+str(setid)+'.txt', max_step,
+    handle = DataReader('dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_train_new_'+str(stu)+'_set'+str(setid)+'.txt',
+                        'dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_test_new_'+str(que)+'_set'+str(setid)+'.txt', max_step,
                         num_of_questions)
     train, vali = handle.getTrainData()
     dtrain = torch.tensor(train.astype(int).tolist(), dtype=torch.long)
@@ -433,7 +433,7 @@ for epoch in range(epochs):
         auc = eval.test_epoch(model, validationLoader, device)
         if auc > best_auc:
             # print('best checkpoint')
-            torch.save({'state_dict': model.state_dict()}, 'C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\checkpoint\\'+model_type+'.pth.tar')
+            torch.save({'state_dict': model.state_dict()}, 'checkpoint\\'+model_type+'.pth.tar')
             best_auc = auc
 
 for setid in range(1,5):
@@ -442,7 +442,7 @@ for setid in range(1,5):
     print("--------------------------------Questions = " + str(que) + " ----------------------------------------")
     trainLoader, validationLoader, testLoader = getDataLoader(bs, questions, length, que, setid, stu)
     # Custom checkpoint loading to ignore mem.memory_value shape mismatch
-    ckpt_path = 'C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\checkpoint\\' + model_type + '.pth.tar'
+    ckpt_path = 'checkpoint\\' + model_type + '.pth.tar'
     checkpoint = torch.load(ckpt_path, map_location=device)
     state_dict = checkpoint['state_dict']
     # Remove mem.memory_value from state_dict if present
