@@ -87,8 +87,8 @@ stu = 50
 que = 30
 
 def getDataLoader(batch_size, num_of_questions, max_step, que, setid, stu):
-    handle = DataReader('C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_train_new_'+str(stu)+'_set'+str(setid)+'.txt',
-                        'C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_test_new_'+str(que)+'_set'+str(setid)+'.txt', max_step,
+    handle = DataReader('dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_train_new_'+str(stu)+'_set'+str(setid)+'.txt',
+                        'dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_test_new_'+str(que)+'_set'+str(setid)+'.txt', max_step,
                         num_of_questions)
     dtrain = torch.tensor(handle.getTrainData().astype(float).tolist(),
                           dtype=torch.float32)
