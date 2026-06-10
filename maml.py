@@ -299,8 +299,8 @@ if __name__ == "__main__":
   dts = 2015
   print(f"------ASSIST{dts} Dataset------")
   print(f"---- RUN for {setid} Student Set----")
-  train_file = 'C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_train_new_'+str(stu)+'_set'+str(setid)+'.txt'
-#     train_file = 'C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\dataset\\assist2017\\assist2017_train.txt'
+  train_file = 'dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_train_new_'+str(stu)+'_set'+str(setid)+'.txt'
+#     train_file = 'dataset\\assist2017\\assist2017_train.txt'
   # Load raw files
   with open(train_file, "r", encoding="utf-8") as f: 
         raw_train = f.read()
@@ -347,9 +347,9 @@ if __name__ == "__main__":
   for i in range(4,que+1):
     print(f"---- RUN for {i} questions----")
     # Your exact paths on Windows:
-    # train_file = 'C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\dataset\\assist2009\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist2009_train_new_'+str(stu)+'_set'+str(setid)+'.txt'
-    test_file  = 'C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_test_new_'+str(i)+'_set'+str(setid)+'.txt'
-    # test_file  = 'C:\\Users\\ibpri\\Downloads\\Knowledge Tracing\\DKVMN-No-ID\\DKVMN-main\\dataset\\assist2017\\Test\\assist2017_test_new_'+str(i)+'.txt'
+    # train_file = 'dataset\\assist2009\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist2009_train_new_'+str(stu)+'_set'+str(setid)+'.txt'
+    test_file  = 'dataset\\assist'+str(dts)+'\\Test - '+str(stu)+'\\Set'+str(setid)+'\\assist'+str(dts)+'_test_new_'+str(i)+'_set'+str(setid)+'.txt'
+    # test_file  = 'dataset\\assist2017\\Test\\assist2017_test_new_'+str(i)+'.txt'
                         
                         
     # Load raw files
