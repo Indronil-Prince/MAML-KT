@@ -8,7 +8,7 @@ This repository contains the code, data processing pipeline, training scripts, a
 
 Knowledge Tracing models such as DKT, DKVMN, and SAKT are typically trained with standard empirical risk minimization (ERM). While effective with long student histories, they often struggle in the early phase when a brand-new student first enters the system.
 
-*MAML-KT addresses this by treating each student sequence as a task:*
+* MAML-KT addresses this by treating each student sequence as a task: *
 
 - a short prefix of interactions is used as the support set
 - the remaining interactions form the query set
@@ -58,15 +58,15 @@ This project supports student-sequence data in the common KT format.
 
 Each student is represented by 3 lines:
 
-sequence length
-question IDs
-correctness labels
+sequence length \
+question IDs \
+correctness labels \
 
 Example:
 
-5
-12, 15, 15, 20, 21
-1, 0, 1, 1, 0
+5 \
+12, 15, 15, 20, 21 \
+1, 0, 1, 1, 0 \
 
 ## Method
 
