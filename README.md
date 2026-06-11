@@ -1,5 +1,6 @@
 # MAML-KT: Addressing Cold Start Problem in Knowledge Tracing for New Students via Few-Shot Model-Agnostic Meta Learning
 #### 27th International Conference on Artificial Intelligence in Education (AIED-2026), Seoul, South Korea
+------------------------------------------------------------------------------------------------------
 
 MAML-KT is a meta-learning framework for cold-start knowledge tracing, designed to improve prediction for new students with only a few initial interactions. Instead of training a single global KT model and applying it unchanged to every learner, MAML-KT learns a parameter initialization that can be rapidly adapted to each student with one or a few gradient updates.
 
