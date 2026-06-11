@@ -43,12 +43,12 @@ Moderate cold start: Questions 11–15
 
 Repository Structure
 ```
-MAML-KT/ \
-│ \
-├── dataset/               # processed and raw dataset files \
-├── models/                # model definitions (GRU/DKT backbone, meta-learning modules) \
-├── figures/               # final figures used in paper \
-├── README.md \
+MAML-KT/
+│ 
+├── dataset/               # processed and raw dataset files 
+├── models/                # model definitions (GRU/DKT backbone, meta-learning modules) 
+├── figures/               # final figures used in paper 
+├── README.md 
 └── requirements.txt
 ```
 
