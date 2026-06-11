@@ -1,4 +1,5 @@
-# MAML-KT: Model-Agnostic Meta-Learning for Cold-Start Knowledge Tracing
+# MAML-KT: Addressing Cold Start Problem in Knowledge Tracing for New Students via Few-Shot Model-Agnostic Meta Learning
+**27th International Conference on Artificial Intelligence in Education (AIED-2026), Seoul, South Korea**
 
 MAML-KT is a meta-learning framework for cold-start knowledge tracing, designed to improve prediction for new students with only a few initial interactions. Instead of training a single global KT model and applying it unchanged to every learner, MAML-KT learns a parameter initialization that can be rapidly adapted to each student with one or a few gradient updates.
 
@@ -8,7 +9,7 @@ This repository contains the code, data processing pipeline, training scripts, a
 
 Knowledge Tracing models such as DKT, DKVMN, and SAKT are typically trained with standard empirical risk minimization (ERM). While effective with long student histories, they often struggle in the early phase when a brand-new student first enters the system.
 
-* MAML-KT addresses this by treating each student sequence as a task: *
+**MAML-KT addresses this by treating each student sequence as a task:**
 
 - a short prefix of interactions is used as the support set
 - the remaining interactions form the query set
