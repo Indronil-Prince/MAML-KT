@@ -38,9 +38,11 @@ Given a student interaction sequence:
 
 We evaluate performance in two early regimes:
 
-Critical cold start: Questions 3–10
+Critical cold start: Questions 3–10 \
 Moderate cold start: Questions 11–15
+
 Repository Structure
+```
 MAML-KT/ \
 │ \
 ├── dataset/               # processed and raw dataset files \
@@ -48,7 +50,7 @@ MAML-KT/ \
 ├── figures/               # final figures used in paper \
 ├── README.md \
 └── requirements.txt
-
+```
 
 ## Data Format
 
@@ -88,7 +90,7 @@ If you use this repository, please cite:
 ```
 @inproceedings{bhattacharjee2026mamlkt,
   title={MAML-KT: Addressing Cold Start in Knowledge Tracing via Few-Shot Meta-Learning},
-  author={Bhattacharjee, Indronil and Wayllace, Claudia},
+  author={Bhattacharjee, Indronil and Wayllace, Christabel},
   booktitle={Proceedings of AIED 2026},
   year={2026}
 }
