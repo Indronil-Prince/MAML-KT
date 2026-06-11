@@ -41,12 +41,12 @@ We evaluate performance in two early regimes:
 Critical cold start: Questions 3–10
 Moderate cold start: Questions 11–15
 Repository Structure
-MAML-KT/
-│
-├── dataset/                  # processed and raw dataset files
-├── models/                # model definitions (GRU/DKT backbone, meta-learning modules)
-├── figures/               # final figures used in paper
-├── README.md
+MAML-KT/ \
+│ \
+├── dataset/               # processed and raw dataset files \
+├── models/                # model definitions (GRU/DKT backbone, meta-learning modules) \
+├── figures/               # final figures used in paper \
+├── README.md \
 └── requirements.txt
 
 
@@ -60,13 +60,13 @@ Each student is represented by 3 lines:
 
 sequence length \
 question IDs \
-correctness labels \
+correctness labels
 
 Example:
 
 5 \
 12, 15, 15, 20, 21 \
-1, 0, 1, 1, 0 \
+1, 0, 1, 1, 0
 
 ## Method
 
